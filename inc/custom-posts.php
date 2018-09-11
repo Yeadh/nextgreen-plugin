@@ -96,7 +96,7 @@ function nextgreen_custom_post_type() {
         'has_archive'        => false,
         'hierarchical'       => true,
         'rewrite'            => array( 'slug' => 'gallery' ),
-        'supports'           => array( 'title', 'editor', 'thumbnail' )
+        'supports'           => array( 'title', 'thumbnail' )
     ));
 
     // Gallery taxonomy
