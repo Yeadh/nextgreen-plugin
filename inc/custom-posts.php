@@ -34,7 +34,7 @@ function nextgreen_custom_post_type() {
         'public'             => true,
         'show_in_menu'       => true,
         'has_archive'        => false,
-        'hierarchical'       => true,
+        'hierarchical'       => false,
         'rewrite'            => array( 'slug' => 'service' ),
         'supports'           => array( 'title', 'editor', 'thumbnail' )
     ));
@@ -64,7 +64,7 @@ function nextgreen_custom_post_type() {
         'public'             => true,
         'show_in_menu'       => true,
         'has_archive'        => false,
-        'hierarchical'       => true,
+        'hierarchical'       => false,
         'rewrite'            => array( 'slug' => 'team' ),
         'supports'           => array( 'title', 'excerpt', 'thumbnail' )
     ));
