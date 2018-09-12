@@ -449,7 +449,7 @@ function nextgreen_shop( $atts, $content = null  ) {
                     </div>
                 </div><!-- end magnifier -->
             </div><!-- end entry -->
-            <h4><a href="<?php the_permalink() ?>"><?php woocommerce_template_loop_product_title() ?></a></h4>
+            <a href="<?php the_permalink() ?>"><?php woocommerce_template_loop_product_title() ?></a>
             <small><?php woocommerce_template_loop_price() ?></small>
             <div class="woocommerce">
                 <?php woocommerce_template_loop_rating() ?>
@@ -580,8 +580,8 @@ function nextgreen_calltoaction( $atts, $content = null  ) {
                       <div class="videobg text-left next-call-us">
                           <h1><?php echo esc_html( $title ) ?></h1>
                           <p><?php echo esc_html( $desc ) ?></p>
-                          <button href="<?php echo esc_url( $btn_url_1 ) ?>" class="btn btn-default"><?php echo esc_html( $btn_text_1 ) ?></button> 
-                          <button href="<?php echo esc_url( $btn_url_2 ) ?>" class="btn btn-default"><?php echo esc_html( $btn_text_2 ) ?></button> 
+                          <a href="<?php echo esc_url( $btn_url_1 ) ?>" class="btn btn-default"><?php echo esc_html( $btn_text_1 ) ?></a> 
+                          <a href="<?php echo esc_url( $btn_url_2 ) ?>" class="btn btn-default"><?php echo esc_html( $btn_text_2 ) ?></a> 
                       </div>
                   </div><!-- end col -->
                   <div class="col-md-5">
@@ -606,8 +606,8 @@ function nextgreen_calltoaction( $atts, $content = null  ) {
                       <div class="videobg text-right">
                           <h1><?php echo esc_html( $title ) ?></h1>
                           <p><?php echo esc_html( $desc ) ?></p>
-                          <button href="<?php echo esc_url( $btn_url_1 ) ?>" class="btn btn-default"><?php echo esc_html( $btn_text_1 ) ?></button> 
-                          <button href="<?php echo esc_url( $btn_url_2 ) ?>" class="btn btn-default"><?php echo esc_html( $btn_text_2 ) ?></button> 
+                          <a href="<?php echo esc_url( $btn_url_1 ) ?>" class="btn btn-default"><?php echo esc_html( $btn_text_1 ) ?></a> 
+                          <a href="<?php echo esc_url( $btn_url_2 ) ?>" class="btn btn-default"><?php echo esc_html( $btn_text_2 ) ?></a> 
                       </div>
                   </div><!-- end col -->
               </div><!-- end row -->
