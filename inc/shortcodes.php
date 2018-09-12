@@ -137,10 +137,6 @@ function nextgreen_services( $atts, $content = null  ) {
    
    ob_start(); 
 
-
-   $image = wp_get_attachment_image_src( $icon , "full");
-   $imgSrc = $image[0];
-
    ?>
    <div id="owl-sticky" class="row sticky-row">
         <?php
@@ -205,7 +201,7 @@ add_shortcode('services_2', 'nextgreen_services_2');
 function nextgreen_team( $atts, $content = null  ) {
    extract( shortcode_atts( array(
       'order' => '',
-      'service_per_page' => ''
+      'team_per_page' => ''
    ), $atts ) );
    
    ob_start(); 
