@@ -538,7 +538,7 @@ function nextgreen_pricing_tables( $atts, $content = null  ) {
               <li><strong><?php echo esc_html($group[$key]['bold']); ?></strong> <?php echo esc_html($group[$key]['normal']); ?></li>
             <?php endforeach; $key++ ?>
           </ul>
-          <a href="<?php echo esc_url( $url ) ?>" type="button" class="btn btn-primary"><?php echo esc_html( $btn ) ?></a>
+          <a href="<?php echo esc_url( $url ) ?>" class="btn btn-primary"><?php echo esc_html( $btn ) ?></a>
       </div>
   </div>
   <?php
