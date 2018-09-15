@@ -103,7 +103,18 @@ function nextgreen_integrateWithVC() {
             "heading" => __( "Description", "nextgreen" ),
             "param_name" => "desc",
             "admin_label" => true
-          )
+          ),
+         array(
+            "type" => "dropdown",
+            "heading" => __( "Text Color", "nextgreen" ),
+            "param_name" => "color",
+            "admin_label" => true,
+            'value'       => array(
+              'Default'  => 'default',
+              'White' => 'white',
+            ),
+            'std'         => 'default',
+         ),
       )
    ) );
 
