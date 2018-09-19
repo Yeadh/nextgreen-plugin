@@ -117,7 +117,7 @@ function nextgreen_we_offer( $atts, $content = null  ) {
    $imgSrc = $image[0];
 
    ?>
-  <div class="why-us text-center">
+  <div class="why-us we-offer text-center">
     <img src="<?php echo esc_url( $imgSrc ) ?>" alt="<?php echo esc_attr( $title ) ?>">
     <strong <?php if ($color == 'white'){echo'style="color: #fff;"';}else{ echo'style="color: #333;"'; } ?>><?php echo esc_html( $title ) ?></strong> 
     <p <?php if ($color == 'white'){echo'style="color: #fff;"';}else{ echo'style="color: #999;"'; } ?>><?php echo esc_html( $desc ) ?></p>
