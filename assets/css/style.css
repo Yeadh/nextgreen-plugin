@@ -389,7 +389,10 @@
     z-index: -1;
     transform: skew(10deg);
 }
-
+.top-text a
+{
+	margin-top: 20px;
+}
 .bottom-section
 {
 	background-repeat: no-repeat;
@@ -420,7 +423,9 @@
     z-index: -1;
     transform: skew(10deg);
 }
-
+.top-text a {
+	margin-top: 20px;
+}
 .bottom-text h3
 {
 	font-weight: 700;

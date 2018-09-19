@@ -461,7 +461,7 @@ function nextgreen_integrateWithVC() {
 
    // Call to action two
    vc_map( array(
-      "name" => __( "Call to Action Two", "nextgreen" ),
+      "name" => __( "Ads", "nextgreen" ),
       "base" => "calltoaction_two",
       "category" => __( "NextGreen", "nextgreen"),
       "icon" =>  plugin_dir_url( dirname( __FILE__ ) ). "assets/images/thumbnail.png",
