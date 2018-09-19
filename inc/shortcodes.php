@@ -273,32 +273,30 @@ function nextgreen_latest_blog( $atts, $content = null  ) {
       <div class="col-md-4 col-sm-6 single-blog-post">
           <div class="blog-wrapper">
               <div class="blog-title">
-                  <div class="category_title">      
-                      <?php the_category( ' , ' ); ?>
-                  </div>
                   <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-                  <div class="blog-image">
-                      <a href="<?php the_permalink() ?>"><?php the_post_thumbnail() ?></a>
-                  </div><!-- end image -->
-                  <div class="post-meta">
-                      <span>
-                      <i class="fa fa-user"></i>
-                      <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) ?>"><?php the_author(); ?></a>
-                      </span>
-                      <span>
-                      <i class="fa fa-tag"></i>
-                      <a href="#">Shop</a>
-                      </span>
-                      <span>
-                      <i class="fa fa-comments"></i>
-                      <a href="<?php comments_link(); ?>"><?php printf( _nx( '1 Comment', '%1$s Comments', get_comments_number(), 'comments title', 'nextgreen' ), number_format_i18n( get_comments_number() ) );?></a>
-                      </span>
-                  </div>
-                  <p><?php echo nextgreen_excerpt( 25 ); ?></p>
-                  <a href="<?php the_permalink() ?>" class="readmore"><?php esc_html_e( 'Read more', 'nextgreen' ) ?></a>
-              </div><!-- end desc -->
+              </div>
+              <div class="blog-image">
+                  <a href="<?php the_permalink() ?>"><?php the_post_thumbnail() ?></a>
+              </div><!-- end image -->
+              <div class="post-meta">
+                  <span>
+                  <i class="fa fa-user"></i>
+                  <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) ?>"><?php the_author(); ?></a>
+                  </span>
+                  <span>
+                  <i class="fa fa-tag"></i>
+                  <?php the_category( ' , ' ); ?>
+                  </span>
+                  <span>
+                  <i class="fa fa-comments"></i>
+                  <a href="<?php comments_link(); ?>"><?php printf( _nx( '1 Comment', '%1$s Comments', get_comments_number(), 'comments title', 'nextgreen' ), number_format_i18n( get_comments_number() ) );?></a>
+                  </span>
+              </div>
+              <p><?php echo nextgreen_excerpt( 25 ); ?></p>
+              <a href="<?php the_permalink() ?>" class="readmore"><?php esc_html_e( 'Read more', 'nextgreen' ) ?></a>
           </div><!-- end blog-wrapper -->
       </div>
+
       <?php endwhile; wp_reset_postdata(); ?>
     </div>
   </div>
@@ -617,6 +615,50 @@ function nextgreen_calltoaction( $atts, $content = null  ) {
 };
 
 add_shortcode('calltoaction', 'nextgreen_calltoaction');
+
+// Call to action two
+function nextgreen_calltoaction_two( $atts, $content = null  ) {
+   extract( shortcode_atts( array(
+      'bgimage' => '',
+      'title' => '',
+      'desc' => '',
+      'actionimg' => '',
+      'call_style' => 'style_one',
+      'btn_text_1' => '',
+      'btn_url_1' => '',
+      'btn_text_2' => '',
+      'btn_url_2' => '',
+   ), $atts ) );
+   
+   ob_start();
+
+    $image = wp_get_attachment_image_src( $bgimage , "full");
+    $imgSrc = $image[0];
+    ?>
+
+    <?php if ($call_style == 'style_one'){ ?>
+    <section class="call-to-action-2" style="background-image: url('<?php echo esc_url( $imgSrc ) ?>');">
+      <div class="container">
+        <div class="row">
+          <div>
+            <div class="col-md-6">
+              <div class="top-text">
+                <div class="videobg text-left">
+                  <h1><?php echo esc_html( $title ) ?></h1>
+                  <p><?php echo esc_html( $desc ) ?></p>
+                  <a href="<?php echo esc_url( $btn_url_1 ) ?>" class="btn btn-default"><?php echo esc_html( $btn_text_1 ) ?></a> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <?php }
+     return ob_get_clean();
+};
+
+add_shortcode('calltoaction_two', 'nextgreen_calltoaction_two');
 
 // Profile Card
 function nextgreen_profile_card( $atts, $content = null  ) {

@@ -459,6 +459,76 @@ function nextgreen_integrateWithVC() {
       )
    ) );   
 
+   // Call to action two
+   vc_map( array(
+      "name" => __( "Call to Action Two", "nextgreen" ),
+      "base" => "calltoaction_two",
+      "category" => __( "NextGreen", "nextgreen"),
+      "icon" =>  plugin_dir_url( dirname( __FILE__ ) ). "assets/images/thumbnail.png",
+      "params" => array(
+         array(
+            "type" => "dropdown",
+            "heading" => __( "Style", "nextgreen" ),
+            "param_name" => "call_style",
+            "admin_label" => true,
+            'value'       => array(
+              'Style One'  => 'style_one',
+              'Style Two' => 'style_two',
+            ),
+            'std'         => 'style_one', // Your default value
+            'description' => __( 'Select Style', 'nextgreen' )
+         ),
+         array(
+            "type" => "attach_image",
+            "heading" => __( "Background Image", "nextgreen" ),
+            "param_name" => "bgimage",
+            "admin_label" => true
+          ),
+         array(
+            "type" => "textfield",
+            "heading" => __( "Title", "nextgreen" ),
+            "param_name" => "title",
+            "admin_label" => true
+          ),
+         array(
+            "type" => "textarea",
+            "heading" => __( "Description", "nextgreen" ),
+            "param_name" => "desc",
+            "admin_label" => true
+          ),
+         array(
+            "type" => "attach_image",
+            "heading" => __( "Action Image", "nextgreen" ),
+            "param_name" => "actionimg",
+            "admin_label" => true
+          ),
+         array(
+            "type" => "textfield",
+            "heading" => __( "Button Text", "nextgreen" ),
+            "param_name" => "btn_text_1",
+            "admin_label" => true
+          ),
+         array(
+            "type" => "textfield",
+            "heading" => __( "Button URL", "nextgreen" ),
+            "param_name" => "btn_url_1",
+            "admin_label" => true
+          ),
+         array(
+            "type" => "textfield",
+            "heading" => __( "Button Text", "nextgreen" ),
+            "param_name" => "btn_text_2",
+            "admin_label" => true
+          ),
+         array(
+            "type" => "textfield",
+            "heading" => __( "Button URL", "nextgreen" ),
+            "param_name" => "btn_url_2",
+            "admin_label" => true
+          ),
+      )
+   ) );   
+
    // Profile Card
    vc_map( array(
       "name" => __( "Profile Card", "nextgreen" ),
