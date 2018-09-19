@@ -426,7 +426,7 @@
     z-index: -1;
     transform: skew(10deg);
 }
-.top-text a {
+.bottom-text a {
 	margin-top: 20px;
 }
 .bottom-text h3
