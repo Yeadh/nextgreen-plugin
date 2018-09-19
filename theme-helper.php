@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: nextgreen-plugin
+ * Plugin Name: nextgreen plugin
  * Plugin URI: https://nexttheme.org/
  * Description: After install the nextgreen WordPress Theme, you must need to install this "nextgreen-plugin" first to get all functions of nextgreen WP Theme.
  * Version: 1.0.0
