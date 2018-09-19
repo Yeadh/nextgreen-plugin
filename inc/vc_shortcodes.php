@@ -467,23 +467,23 @@ function nextgreen_integrateWithVC() {
       "icon" =>  plugin_dir_url( dirname( __FILE__ ) ). "assets/images/thumbnail.png",
       "params" => array(
          array(
-            "type" => "dropdown",
-            "heading" => __( "Style", "nextgreen" ),
-            "param_name" => "call_style",
-            "admin_label" => true,
-            'value'       => array(
-              'Style One'  => 'style_one',
-              'Style Two' => 'style_two',
-            ),
-            'std'         => 'style_one', // Your default value
-            'description' => __( 'Select Style', 'nextgreen' )
-         ),
-         array(
             "type" => "attach_image",
             "heading" => __( "Background Image", "nextgreen" ),
             "param_name" => "bgimage",
             "admin_label" => true
           ),
+         array(
+            "type" => "dropdown",
+            "heading" => __( "Image Align", "nextgreen" ),
+            "param_name" => "call_style",
+            "admin_label" => true,
+            'value'       => array(
+              'Image Right'  => 'style_one',
+              'Image Left' => 'style_two',
+            ),
+            'std'         => 'style_one', // Your default value
+            'description' => __( 'Select Style', 'nextgreen' )
+         ),
          array(
             "type" => "textfield",
             "heading" => __( "Title", "nextgreen" ),
@@ -497,35 +497,17 @@ function nextgreen_integrateWithVC() {
             "admin_label" => true
           ),
          array(
-            "type" => "attach_image",
-            "heading" => __( "Action Image", "nextgreen" ),
-            "param_name" => "actionimg",
-            "admin_label" => true
-          ),
-         array(
             "type" => "textfield",
             "heading" => __( "Button Text", "nextgreen" ),
-            "param_name" => "btn_text_1",
+            "param_name" => "btn_text",
             "admin_label" => true
           ),
          array(
             "type" => "textfield",
             "heading" => __( "Button URL", "nextgreen" ),
-            "param_name" => "btn_url_1",
+            "param_name" => "btn_url",
             "admin_label" => true
-          ),
-         array(
-            "type" => "textfield",
-            "heading" => __( "Button Text", "nextgreen" ),
-            "param_name" => "btn_text_2",
-            "admin_label" => true
-          ),
-         array(
-            "type" => "textfield",
-            "heading" => __( "Button URL", "nextgreen" ),
-            "param_name" => "btn_url_2",
-            "admin_label" => true
-          ),
+          )
       )
    ) );   
 

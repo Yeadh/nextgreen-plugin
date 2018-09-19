@@ -622,12 +622,9 @@ function nextgreen_calltoaction_two( $atts, $content = null  ) {
       'bgimage' => '',
       'title' => '',
       'desc' => '',
-      'actionimg' => '',
       'call_style' => 'style_one',
-      'btn_text_1' => '',
-      'btn_url_1' => '',
-      'btn_text_2' => '',
-      'btn_url_2' => '',
+      'btn_text' => '',
+      'btn_url' => ''
    ), $atts ) );
    
    ob_start();
@@ -637,7 +634,7 @@ function nextgreen_calltoaction_two( $atts, $content = null  ) {
     ?>
 
     <?php if ($call_style == 'style_one'){ ?>
-    <section class="call-to-action-2" style="background-image: url('<?php echo esc_url( $imgSrc ) ?>');">
+    <section class="top-section" style="background-image: url('<?php echo esc_url( $imgSrc ) ?>');">
       <div class="container">
         <div class="row">
           <div>
@@ -646,7 +643,25 @@ function nextgreen_calltoaction_two( $atts, $content = null  ) {
                 <div class="videobg text-left">
                   <h1><?php echo esc_html( $title ) ?></h1>
                   <p><?php echo esc_html( $desc ) ?></p>
-                  <a href="<?php echo esc_url( $btn_url_1 ) ?>" class="btn btn-default"><?php echo esc_html( $btn_text_1 ) ?></a> 
+                  <a href="<?php echo esc_url( $btn_url ) ?>" class="btn btn-default"><?php echo esc_html( $btn_text ) ?></a> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <?php } elseif ($call_style == 'style_two') { ?>
+    <section class="bottom-section" style="background-image: url('<?php echo esc_url( $imgSrc ) ?>');">
+      <div class="container">
+        <div class="row">
+          <div>
+            <div class="col-md-6 offset-md-6">
+              <div class="bottom-text">
+                <div class="videobg text-right">
+                  <h1><?php echo esc_html( $title ) ?></h1>
+                  <p><?php echo esc_html( $desc ) ?></p>
+                  <a href="<?php echo esc_url( $btn_url ) ?>" class="btn btn-default"><?php echo esc_html( $btn_text ) ?></a>
                 </div>
               </div>
             </div>
